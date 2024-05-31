@@ -1,5 +1,6 @@
 
 let ans="0";
+let bill=0;
 
 
 function MovePointer()
@@ -9,6 +10,80 @@ function MovePointer()
     input.scrollLeft=input.scrollWidth;
     
 }
+
+function LockApp(){
+
+    //     document.querySelector('.CalDiv').style=`display:none`;
+
+    //     document.querySelector('.AvaSoon').style=`display: none;`;
+
+    //     document.querySelector('.lock-screen').classList.replace('animate-lock-screen', 'active');
+
+    //     // document.querySelector('.application-menu').style=`visibility: visible;
+    //     // display:block;`;
+    //     document.querySelector('.application-menu').style=`visibility: hidden;
+    // display:none;`;
+
+    //     // document.querySelector('.bs1').innerHTML=`<img class="AppleImg" src="AppleBg.jpg" alt="" />`;
+
+    // document.querySelector('.lock-screen').style.height = '100%';
+    
+    // // document.querySelector('.application-menu').classList.add('active');
+
+
+    //     document.querySelector('.bs1').innerHTML=`
+        
+    //     <img class="AppleImg" src="AppleBg.jpg" alt="" />
+
+    //     `;
+    //     bill=0;
+
+
+
+
+        document.querySelector('.lock-screen').classList.replace('animate-lock-screen', 'active');
+    document.querySelector('.lock-screen').style.height = '100%';
+    document.querySelector('.application-menu').classList.remove('active');
+
+
+        document.querySelector('.bs1').innerHTML=`
+        
+        <img class="AppleImg" src="AppleBg.jpg" alt="" />
+
+        `;
+
+        bill=0;
+        
+
+
+}
+
+
+function DateTime() {
+    const currentDateTime = new Date();
+    let hours = currentDateTime.getHours();
+
+    let minutes = currentDateTime.getMinutes();
+  
+    if (minutes=== 0 || minutes===1 || minutes===2 || minutes===3 || minutes===4 || minutes===5 || minutes===6 || minutes===7 || minutes===8 || minutes===9)
+            minutes="0"+minutes;
+
+    if(hours>12)
+    {
+        hours=hours-12;
+    }
+    
+    const Time =  hours + ":" + minutes;
+    return Time;
+  }
+  
+
+  setInterval(() => {
+
+    document.querySelector('.Time').innerHTML=`${DateTime()}`;
+    document.querySelector('.Time2').innerHTML=`${DateTime()}`;
+    
+  }, 1000);
 
 
 
@@ -47,8 +122,10 @@ function OpenAppScreen () {
 function Calculator()
 {
 
-    document.querySelector('.application-menu').style=`visibility: hidden;
-    display:none;`;
+    // document.querySelector('.application-menu').style=`visibility: hidden;
+    // display:none;`;
+
+    document.querySelector('.application-menu').classList.remove('active');
 
     document.querySelector('.bs1').innerHTML=``;
 
@@ -57,14 +134,20 @@ function Calculator()
     document.querySelector('.CalDiv').style=`display:block`;
 
 
+    document.querySelector('.lock-screen').classList.remove('active');
+    // document.querySelector('.lock-screen').style.height = '100%';
+    
+
 
 }
 
 function Coming()
 {
 
-    document.querySelector('.application-menu').style=`visibility: hidden;
-    display:none;`;
+    // document.querySelector('.application-menu').style=`visibility: hidden;
+    // display:none;`;
+
+    document.querySelector('.application-menu').classList.remove('active');
 
     document.querySelector('.AvaSoon').style=`display: flex;
     justify-content: center;
@@ -75,7 +158,7 @@ function Coming()
 
 
 
-let bill=0;
+
 
 function Backs()
 {
@@ -89,8 +172,10 @@ function Backs()
 
         
 
-        document.querySelector('.application-menu').style=`visibility: visible;
-        display:block;`;
+        // document.querySelector('.application-menu').style=`visibility: visible;
+        // display:block;`;
+
+        document.querySelector('.application-menu').classList.add('active');
 
         document.querySelector('.bs1').innerHTML=`<img class="AppleImg" src="Apple2Bg.jpg" alt="" />`;
 
@@ -101,6 +186,7 @@ function Backs()
 function Checker()
 {
     bill=bill+1;
+    
 
 }
 
