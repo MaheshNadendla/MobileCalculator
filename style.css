@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
-    transition: .8s;
+    transition: 0.8s;
 }
 
 .Icons{
@@ -46,7 +46,7 @@
 }
 
 .Git{
-    scale: 1.21;
+    scale: 1.24;
 }
 .Youtube{
     scale: 1.05;
@@ -60,6 +60,10 @@
     font-weight: bold;
     color: white;
     padding-left: 70%;
+}
+
+.Lock{
+    scale: 1;
 }
 
 
@@ -124,6 +128,11 @@ body {
 
     height: 17%;
     width: auto;
+}
+
+.lock-app{
+
+    padding-left: 142px;
 }
 
 
@@ -375,7 +384,7 @@ body {
     z-index: 2;
     position: absolute;
     top: 0;
-    transition: .8s;
+    transition: 0.8s;
     overflow: hidden;
     left: 0;
     height: 0%;
@@ -590,6 +599,7 @@ body {
 
    height: 500px;
    width: 280px;
+   /* z-index: 200; */
 
 }
 
